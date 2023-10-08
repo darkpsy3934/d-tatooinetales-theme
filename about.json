@@ -1,0 +1,33 @@
+{
+  "name": "TatooineTales",
+  "component": false,
+  "license_url": null,
+  "about_url": null,
+  "authors": null,
+  "theme_version": null,
+  "minimum_discourse_version": null,
+  "maximum_discourse_version": null,
+  "assets": {
+    "bgdrop-main": "assets/bgdrop-main.jpg",
+    "bgmain-2": "assets/bgmain-2.jpg"
+  },
+  "color_schemes": {
+    "Dark": {
+      "primary": "dddddd",
+      "secondary": "222222",
+      "tertiary": "0f82af",
+      "quaternary": "c14924",
+      "header_background": "111111",
+      "header_primary": "dddddd",
+      "highlight": "a87137",
+      "selected": "e9e9e9",
+      "hover": "f2f2f2",
+      "danger": "e45735",
+      "success": "1ca551",
+      "love": "00aeff"
+    }
+  },
+  "modifiers": {
+  },
+  "learn_more": "https://meta.discourse.org/t/beginners-guide-to-using-discourse-themes/91966"
+}
