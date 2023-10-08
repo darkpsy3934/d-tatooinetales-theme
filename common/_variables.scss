@@ -1,0 +1,495 @@
+@import "themes/variables/_defaults";
+// Redefine all the font sizes and line heights to match the comp.
+$base-font-size-smallest: 0.875em; // eq. to 14px
+$base-font-size-smaller: 0.938em; // eq. to 15px
+$base-font-size: 1em; // eq. to 16px
+$base-font-size-larger: 1.125em; // eq. to 18px
+$base-font-size-largest: 1.25em; // eq. to 20px
+
+// Font-size definitions, multiplier ^ (step / interval)
+$font-up-6: 2.296em !default;
+$font-up-5: 2em !default;
+$font-up-4: 1.7511em !default;
+$font-up-3: 1.5157em !default;
+$font-up-2: 1.3195em !default;
+$font-up-1: 1.1487em !default; // 2^(1/5)
+$font-0: 1em;
+$font-down-1: 0.8706em !default; // 2^(-1/5)
+$font-down-2: 0.7579em !default; // Smallest size we use based on the 1em base
+$font-down-3: 0.6599em !default;
+$font-down-4: 0.5745em !default;
+$font-down-5: 0.5em !default;
+$font-down-6: 0.4355em !default;
+
+$font-size-h1plus: 3em; //48
+$font-size-h1: 2.25em; //36
+$font-size-h2: 1.875em; //30
+$font-size-h3: 1.5em; //24
+$font-size-h4: 1.25em; //20
+$font-size-h5: 1.125em; //18
+$font-size-h6: 1em; //16
+
+$line-height-h1plus: 1.05;
+$line-height-h1: 1.2;
+$line-height-h2: 1.4;
+$line-height-h3: 1.6;
+$line-height-h4: 1.8;
+$line-height-h5: 1.6;
+$line-height-h6: 1.6;
+$line-height-base: 1.7;
+
+$line-height-base-multiline: 1.4;
+
+// Import brand variables for TatooineTales
+$brand-primary: #cd69fc;
+$brand-mvp: #81b558;
+$brand-broadsword: #f7b500;
+$brand-blizzard: #00aeff;
+
+$franchise: "tatooinetales" !default;
+
+//- currently unused since we're not using _scaffolding.scss
+$text-color: #fff;
+$link-hover-color: #fff;
+
+//- typography
+$font-size-h1plus: 3em; //48
+$font-size-h1: 2.25em; //36
+$font-size-h2: 1.875em; //30
+$font-size-h3: 1.5em; //24
+$font-size-h4: 1.25em; //20
+$font-size-h5: 1.125em; //18
+$font-size-h6: 1em; //16
+
+$line-height-base: 1.7;
+
+//- tables
+$table-bg-hover: rgba(#fff, 0.05);
+
+//- forms
+$input-border: rgba(#fff, 0.15);
+
+$legend-color: rgba(#fff, 0.5);
+
+//- dropdowns
+$dropdown-bg: #272e3b;
+$dropdown-border: rgba(#fff, 0.15);
+
+//- grid
+$screen-xs: 480px;
+$screen-xs-min: $screen-xs;
+
+//- themes & franchises
+$color-theme-tatooinetales: #cd69fc;
+
+//- opacity helpers
+$opacity-full: 1 !default;
+$opacity-heavy: 0.8 !default;
+$opacity-half: 0.5 !default;
+$opacity-light: 0.3 !default;
+$opacity-extralight: 0.15 !default;
+$opacity-mediumfaint: 0.1 !default;
+$opacity-faint: 0.05 !default;
+
+//- background colors
+$color-background-base: #002650 !default;
+
+$color-background-light: #095386 !default;
+$color-background-lighter: #0e86ca !default;
+$color-background-lightest: #00aeff !default;
+
+$color-background-dark: #00265c !default;
+$color-background-darker: #001845 !default;
+$color-background-darkest: #000b3a !default;
+
+$color-background-matte: #1c2534 !default;
+$color-background-matte-light: #272e3b !default;
+
+$color-background-nav: rgba(#fff, $opacity-faint) !default;
+
+//- fonts and typography
+$font-family-title: "Object Sans", Helvetica, Arial, sans-serif !default;
+
+$font-margin-title: -0.05em !default;
+$font-margin-base: 0 !default;
+
+$font-margin-h1plus: $font-margin-title !default;
+$font-margin-h1: $font-margin-title !default;
+$font-margin-h2: $font-margin-title !default;
+$font-margin-h3: $font-margin-title !default;
+$font-margin-h4: $font-margin-title !default;
+$font-margin-h5: $font-margin-base !default;
+$font-margin-h6: $font-margin-base !default;
+
+$font-weight-normal: 400 !default;
+$font-weight-heavy: 700 !default;
+
+//- text and link colors
+$color-text: #ffffff !default;
+$color-text-priority-1: $color-text !default;
+$color-text-priority-2: rgba($color-text, $opacity-heavy) !default;
+$color-text-priority-3: rgba($color-text, $opacity-half) !default;
+$color-text-priority-4: rgba($color-text, $opacity-light) !default;
+$color-text-priority-5: rgba($color-text, $opacity-extralight) !default;
+
+$color-text-link: #00aeff !default;
+$color-text-link-hover: #ffffff !default;
+$color-text-link-active: rgba(145, 228, 255, $opacity-heavy) !default;
+$color-text-link-disabled: rgba($color-text-link, $opacity-extralight) !default;
+
+$color-border-base: white !default;
+$color-border-inverse-base: black !default;
+$color-border: rgba($color-border-base, $opacity-light) !default;
+$color-border-light: rgba($color-border-base, $opacity-extralight) !default;
+$color-border-extralight: rgba($color-border-base, $opacity-faint) !default;
+$color-border-inverse: rgba(
+  $color-border-inverse-base,
+  $opacity-light
+) !default;
+$color-border-inverse-light: rgba(
+  $color-border-inverse-base,
+  $opacity-extralight
+) !default;
+$color-border-inverse-extralight: rgba(
+  $color-border-inverse-base,
+  $opacity-faint
+) !default;
+
+$color-block-background: black !default;
+$color-block-background-light: rgba(
+  $color-block-background,
+  $opacity-light
+) !default;
+$color-block-background-extralight: rgba(
+  $color-block-background,
+  $opacity-faint
+) !default;
+
+$color-block-background-inverse: white !default;
+$color-block-background-inverse-light: rgba(
+  $color-block-background-inverse,
+  $opacity-light
+) !default;
+$color-block-background-inverse-extralight: rgba(
+  $color-block-background-inverse,
+  $opacity-faint
+) !default;
+
+//- form elements
+$color-form-background-base: rgba(
+  $color-block-background,
+  $opacity-light
+) !default;
+$color-form-background-hover: $color-form-background-base !default;
+
+$color-form-border-base: rgba($color-border-base, 0.25) !default;
+$color-form-border-active: $brand-primary !default;
+$color-form-border-hover: rgba($color-border-base, $opacity-half) !default;
+
+$color-form-text-base: rgba($color-text, 0.7) !default;
+$color-form-text-active: $color-text !default;
+$color-form-text-hover: $color-text !default;
+
+$color-form-icon-base: #0e86ca !default;
+$color-form-icon-hover: $brand-primary !default;
+$color-form-icon-active: $color-form-icon-hover !default;
+
+$color-form-dropdown-background-base: rgb(39, 46, 59) !default;
+$color-form-dropdown-background-hover: rgba(white, $opacity-faint) !default;
+$color-form-dropdown-background-selected: $color-background-lighter !default;
+$color-form-dropdown-shadow: 0 0 0 1px #3d434f inset,
+  0 5px 10px rgba($color-block-background, $opacity-heavy) !default;
+$color-form-dropdown-text-base: $color-text-priority-2 !default;
+$color-form-dropdown-text-hover: $color-text !default;
+$color-form-dropdown-text-selected: $color-form-dropdown-text-hover !default;
+$color-form-dropdown-border-base: $color-block-background !default;
+
+$font-weight-form-base: $font-weight-normal !default;
+$line-height-form-base: 35px !default;
+
+//- buttons
+$opacity-button-primary-background: 1 !default;
+$opacity-button-primary-border: 1 !default;
+$opacity-button-primary-text: 1 !default;
+$opacity-button-secondary-background: 0.4 !default;
+$opacity-button-secondary-border: 1 !default;
+$opacity-button-secondary-text: 1.4 !default;
+$opacity-button-tertiary-background: 0.2 !default;
+$opacity-button-tertiary-border: $opacity-extralight !default;
+$opacity-button-tertiary-text: 1 !default;
+$opacity-button-flat-text: 1 !default;
+$opacity-button-disabled-background: 0.5 !default;
+$opacity-button-disabled-text: 0.5 !default;
+
+$color-button-background: rgba(
+  #006fb2,
+  $opacity-button-primary-background
+) !default;
+$color-button-background-hover: rgba(
+  #007bc6,
+  $opacity-button-primary-background
+) !default;
+$color-button-background-pressed: rgba(
+  #00629e,
+  $opacity-button-primary-background
+) !default;
+$color-button-background-disabled: rgba(
+  $color-button-background,
+  $opacity-button-primary-background * $opacity-button-disabled-background
+) !default;
+$color-button-border: rgba(
+  $brand-primary,
+  $opacity-button-primary-border
+) !default;
+$color-button-border-hover: rgba(
+  #79d4ff,
+  $opacity-button-primary-border
+) !default;
+$color-button-border-pressed: rgba(
+  #007bc6,
+  $opacity-button-primary-border
+) !default;
+$color-button-border-disabled: rgba(
+  $color-button-border,
+  $opacity-button-disabled-background
+) !default;
+$color-button-text: #fff !default;
+$color-button-text-hover: #fff !default;
+$color-button-text-pressed: rgba($color-button-text, $opacity-heavy) !default;
+$color-button-text-disabled: rgba(
+  $color-button-text,
+  $opacity-button-disabled-text
+) !default;
+
+$color-button-secondary-background: rgba(
+  $color-block-background,
+  $opacity-button-secondary-background
+) !default;
+$color-button-secondary-background-hover: rgba(
+  $color-block-background,
+  $opacity-button-secondary-background
+) !default;
+$color-button-secondary-background-pressed: rgba(
+  $color-block-background,
+  $opacity-button-secondary-background
+) !default;
+$color-button-secondary-background-disabled: rgba(
+  $color-button-secondary-background,
+  $opacity-button-secondary-background * $opacity-button-disabled-background
+) !default;
+$color-button-secondary-border: rgba(
+  $brand-primary,
+  $opacity-button-secondary-border
+) !default;
+$color-button-secondary-border-hover: rgba(
+  #91e4ff,
+  $opacity-button-secondary-border
+) !default;
+$color-button-secondary-border-pressed: rgba(
+  27,
+  30,
+  39,
+  $opacity-button-secondary-border * $opacity-heavy
+) !default;
+$color-button-secondary-border-disabled: rgba(
+  $color-button-secondary-border,
+  $opacity-button-secondary-background * $opacity-button-disabled-background
+) !default;
+$color-button-secondary-text: rgba(
+  $brand-primary,
+  $opacity-button-secondary-text
+) !default;
+$color-button-secondary-text-hover: rgba(
+  #91e4ff,
+  $opacity-button-secondary-text
+) !default;
+$color-button-secondary-text-pressed: rgba(
+  $color-button-secondary-text-hover,
+  $opacity-button-secondary-text * $opacity-heavy
+) !default;
+$color-button-secondary-text-disabled: rgba(
+  $color-button-secondary-text,
+  $opacity-button-secondary-text * $opacity-button-disabled-text
+) !default;
+
+$color-button-tertiary-background: rgba(
+  $color-block-background,
+  $opacity-button-tertiary-background
+) !default;
+$color-button-tertiary-background-hover: rgba(
+  $color-block-background,
+  $opacity-button-tertiary-background
+) !default;
+$color-button-tertiary-background-pressed: rgba(
+  $color-block-background,
+  $opacity-light
+) !default;
+$color-button-tertiary-background-disabled: rgba(
+  $color-button-tertiary-background,
+  $opacity-button-tertiary-background * $opacity-button-disabled-background
+) !default;
+$color-button-tertiary-border: rgba(
+  $color-border-base,
+  $opacity-button-tertiary-border
+) !default;
+$color-button-tertiary-border-hover: rgba(
+  $color-border-base,
+  $opacity-button-tertiary-border * 2
+) !default;
+$color-button-tertiary-border-pressed: rgba(
+  $color-border-base,
+  $opacity-button-tertiary-border
+) !default;
+$color-button-tertiary-border-disabled: rgba(
+  $color-button-tertiary-border,
+  $opacity-button-tertiary-border * $opacity-button-disabled-background
+) !default;
+$color-button-tertiary-text: rgba(
+  $brand-primary,
+  $opacity-button-tertiary-text
+) !default;
+$color-button-tertiary-text-hover: rgba(
+  #91e4ff,
+  $opacity-button-tertiary-text
+) !default;
+$color-button-tertiary-text-pressed: rgba(
+  $color-button-tertiary-text-hover,
+  $opacity-button-tertiary-text * $opacity-heavy
+) !default;
+$color-button-tertiary-text-disabled: rgba(
+  $color-button-tertiary-text,
+  $opacity-button-tertiary-text * $opacity-button-disabled-text
+) !default;
+
+$color-button-flat-text: rgba(
+  $brand-primary,
+  $opacity-button-flat-text
+) !default;
+$color-button-flat-text-hover: rgba(
+  #91e4ff,
+  $opacity-button-flat-text
+) !default;
+$color-button-flat-text-pressed: rgba(
+  $color-button-flat-text-hover,
+  $opacity-heavy
+) !default;
+$color-button-flat-text-disabled: rgba(
+  $color-button-flat-text,
+  $opacity-button-flat-text * $opacity-button-disabled-text
+) !default;
+
+//- borders & edge styles
+$border-style-thin: solid 1px !default;
+$border-style-medium: solid 2px !default;
+$border-style-thick: solid 3px !default;
+
+$padding-button-small: 7px 42px !default;
+
+$space-normal: 20px !default;
+$space-tiny: calc($space-normal / 4) !default;
+$space-small: calc($space-normal / 2) !default;
+$space-medium: $space-normal !default;
+
+//- transitions and animations
+$transition-hover-speed: 200ms !default;
+$transition-hover-link: color $transition-hover-speed !default;
+$transition-hover-button: color $transition-hover-speed,
+  fill $transition-hover-speed, background-color $transition-hover-speed,
+  border-color $transition-hover-speed !default;
+$transition-hover-form: $transition-hover-button !default;
+
+//- z-index layers
+$zIndex-above: 1 !default; // nudge content above those around it (mostly for slight DOM order tweaks)
+
+//- navigation
+$line-height-site-nav: 44px !default;
+$line-height-site-nav-sm: 40px !default;
+
+//- tables
+$color-background-table-hover: rgba(
+  $color-block-background-inverse,
+  $opacity-faint
+) !default;
+
+// Common theme variables. These variables do not exist in TatooineTales UI.
+$color-theme-primary: $color-theme-tatooinetales !default;
+$color-theme-icon: rgb(247, 147, 30) !default;
+$color-theme-secondary: $color-theme-tatooinetales !default;
+$color-theme-background: #111217 !default;
+
+// Sub header on the site
+$header-height: 48px;
+$main-outlet-padding-top: 56px;
+
+// Space that needs to be reserved so that contents don't overlap the timeline in the post view.
+$timeline-spacing: 50px;
+
+// Max width of the page before the timeline collapses
+$timeline-max-width: 925px;
+
+// Max width of the page before the elements stop scaling out.
+$full-max-width: 1250px;
+
+$main-content-padding: 16px;
+
+// Enough space to display a nice banner
+$max-banner-width: 641px;
+
+// banner width on desktop, to calculate when and how to display gradients
+// for widescreen monitors to fade to welcome-banner-bg-color
+$desktop-banner-width: 2500px !default;
+
+// navbar
+$navbar-mobile-breakpoint-width: 960px;
+
+// Dropdown inset color. This is hard-coded as part of the dropdown's box-shadow in Blizzard UI, but we need to use the
+// color in multiple places.
+$dropdown-inset-color: #3d434f;
+$dropdown-max-height: 450px;
+
+// Effective max z-index for our designs
+$max-z-index: 99999;
+
+$post-avatar-image-width: 80px;
+$post-avatar-image-height: 80px;
+$post-avatar-image-width-small: 50px;
+$post-avatar-image-height-small: 50px;
+$quote-avatar-image-width: 36px;
+$quote-avatar-image-height: 36px;
+$topic-map-avatar-image-width: 28px;
+$topic-map-avatar-image-height: 28px;
+$summary-avatar-image-width: 120px;
+$summary-avatar-image-height: 120px;
+$activity-avatar-image-width: 45px;
+$activity-avatar-image-height: 45px;
+$user-card-avatar-image-width: 70px;
+$user-card-avatar-image-height: 70px;
+
+$post-button-height: 40px;
+$post-button-width: 40px;
+
+$small-space: 0.25em;
+$medium-space: 0.5em;
+$large-space: 1em;
+
+$topic-map-avatar-margin-right: 0.25em;
+$quote-avatar-margin-right: 0.7em;
+$post-avatar-margin-right: 0.55em;
+$summary-avatar-image-right: 10px;
+$user-card-avatar-image-right: 0.25em;
+
+$color-button-danger-text: #c63c1b;
+$color-button-danger-text-hover: #e45735;
+$color-button-danger-text-disabled: rgba(198, 60, 27, 0.15);
+
+$color-post-status-spam: #cb4742;
+$color-post-status-hidden: #22475a;
+$color-post-status-deleted: #22475a;
+
+$tatooinetales-icon-small-width: 20px;
+$tatooinetales-icon-small-height: 14px;
+
+$color-border-primary: rgba($primary, 0.15);
+
+$color-navbar-primary: #17191e;
+$color-navbar-secondary: #111218;
